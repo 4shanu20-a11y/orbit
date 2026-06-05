@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" data-theme="Light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <!-- SEO & Description -->
+    <meta name="description" content="ORBIT — Team Task Intelligence Platform by Keyframe Studios. Manage projects, track tasks, and collaborate with your team." />
+    <meta name="theme-color" content="#0079bf" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="ORBIT — KFS Planner" />
+    <meta property="og:description" content="Team Task Intelligence Platform by Keyframe Studios" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/favicon.png" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="ORBIT — KFS Planner" />
+    <meta name="twitter:description" content="Team Task Intelligence Platform" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
+
+    <!-- Fonts (preconnect for speed) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <title>ORBIT — KFS Planner</title>
+
+    <!-- Inline loader styles — zero flash, no external deps -->
+    <style>
+      #app-loader {
+        position: fixed;
+        inset: 0;
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        font-family: 'Inter', system-ui, sans-serif;
+        gap: 16px;
+        transition: opacity 0.3s ease;
+      }
+      #app-loader .loader-logo {
+        font-size: 18px;
+        font-weight: 700;
+        color: #0079bf;
+        letter-spacing: 0.08em;
+      }
+      #app-loader .loader-ring {
+        width: 32px;
+        height: 32px;
+        border: 3px solid #e8e8e8;
+        border-top-color: #0079bf;
+        border-radius: 50%;
+        animation: loaderSpin 0.8s linear infinite;
+      }
+      @keyframes loaderSpin {
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Loading screen — removed by main.jsx after React mounts -->
+    <div id="app-loader">
+      <div class="loader-ring"></div>
+      <div class="loader-logo">ORBIT</div>
+    </div>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
